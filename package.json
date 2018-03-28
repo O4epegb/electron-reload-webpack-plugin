@@ -1,0 +1,29 @@
+{
+  "name": "electron-reload-webpack-plugin",
+  "version": "1.0.4",
+  "description": "Reload electron app on webpack build",
+  "main": "dist/index.js",
+  "source": "src/index.js",
+  "scripts": {
+    "dev": "microbundle watch --format=cjs",
+    "build": "microbundle --format=cjs",
+    "prepublish": "npm run build",
+    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
+  },
+  "keywords": [
+    "webpack",
+    "electron",
+    "electron-connect"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "Anon",
+  "license": "MIT",
+  "peerDependencies": {
+    "electron-connect": "^0.6.3"
+  },
+  "devDependencies": {
+    "microbundle": "^0.4.4"
+  }
+}
