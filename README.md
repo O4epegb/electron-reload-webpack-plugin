@@ -17,7 +17,7 @@ npm install --save-dev electron-reload-webpack-plugin
 
 ### 1. Add plugin to `webpack.config.js`
 
-```
+```javascript
 const path = require('path');
 const createElectronReloadWebpackPlugin = require('electron-reload-webpack-plugin');
 
@@ -44,13 +44,14 @@ module.exports = {
 
         // If your config `target` is different from recommended one then you should also specify it like this `ElectronReloadWebpackPlugin('electron-renderer')`
     ],
+
     // ...
 };
 ```
 
 ### 1.1 Create `electron-connect` client if you need to reload renderer process
 
-```
+```javascript
 import { app, BrowserWindow } from 'electron';
 import { client } from 'electron-connect';
 
