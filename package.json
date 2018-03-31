@@ -24,12 +24,22 @@
   "scripts": {
     "dev": "microbundle watch --format=cjs",
     "build": "microbundle --format=cjs",
+    "precommit": "lint-staged",
     "prepublish": "npm run build"
   },
   "devDependencies": {
-    "microbundle": "^0.4.4"
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.1",
+    "microbundle": "^0.4.4",
+    "prettier": "^1.11.1"
   },
   "peerDependencies": {
     "electron-connect": "^0.6.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --tab-width 4 --write",
+      "git add"
+    ]
   }
 }
