@@ -1,6 +1,6 @@
 {
   "name": "electron-reload-webpack-plugin",
-  "version": "2.0.1",
+  "version": "2.0.4",
   "description": "Webpack plugin that reloads Electron process on build",
   "author": "Daniil Demidovich <daniil.demidovich@gmail.com>",
   "license": "MIT",
@@ -23,15 +23,15 @@
   ],
   "scripts": {
     "dev": "microbundle watch --format=cjs",
-    "build": "microbundle --format=cjs",
+    "build": "microbundle --format=cjs --compress=false",
     "precommit": "lint-staged",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "husky": "^0.14.3",
-    "lint-staged": "^7.0.1",
+    "lint-staged": "^7.2.0",
     "microbundle": "^0.4.4",
-    "prettier": "^1.11.1"
+    "prettier": "^1.13.5"
   },
   "peerDependencies": {
     "electron-connect": "^0.6.3"

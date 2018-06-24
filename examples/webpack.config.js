@@ -8,6 +8,8 @@ const useElectronConnect = process.env.ELECTRON_CONNECT === 'true';
 
 const ElectronReloadWebpackPlugin = createElectronReloadWebpackPlugin({
     path: path.join(__dirname, './build/backend.js'),
+    // Or
+    // path: './',
     logLevel: 0
 });
 

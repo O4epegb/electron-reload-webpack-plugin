@@ -23,8 +23,9 @@ const createElectronReloadWebpackPlugin = require('electron-reload-webpack-plugi
 
 // Create one plugin for both renderer and main process
 const ElectronReloadWebpackPlugin = createElectronReloadWebpackPlugin({
-    // Path to main process file
+    // Path to `package.json` file with main field set to main process file path, or just main process file path
     path: path.join(__dirname, './build/backend.js'),
+    // or just `path: './'`,
     // Other 'electron-connect' options
     logLevel: 0
 });
